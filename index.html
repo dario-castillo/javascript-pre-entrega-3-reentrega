@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/lapiz.png" type="image/png">
+    <title>Dibujos a pedido</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="js/class.presupuestador.js" ></script>
+    <script defer src="js/index.js"></script>
+</head>
+
+<body>
+    <h1>Darío Castillo / Dibujante freelance</h1>
+    <div class="presupuestar">
+        <h2>¿Cuánto cuestan los dibujos?</h2>
+        <h3>¡Desde aquí puedes consultar precios y ordenar un dibujo! 😉</h3>
+        
+        <main>
+            <input type="text" id="nombre" class="input-nombre-usuario" placeholder="¿Cómo te llamas?">
+            <input type="email" id="email" autocomplete="off" placeholder="¿Tu email?">
+            <label for="tipoDibujo">¿Qué tipo de dibujo te gustaría?</label>
+            <select id="tipoDibujo">
+                <option selected disabled></option>
+            </select>
+            <label for="cantidad">¿Cuántos dibujos quieres?</label>
+            <input type="number" id="cantidad" min="1" max="10">
+            <label for="tamanioDibujo">¿En qué tamaño?</label>
+            <select id="tamanioDibujo">
+                <option selected disabled></option>
+            </select>
+            <button type="submit" id="botonCuantoCuesta">¿CUÁNTO CUESTA?</button>
+        </main>
+    </div>
+    <br>
+    <br>
+    <div class="dibujoConsultado ocultar">
+        <h2>Aquí tienes el detalle de tu consulta 😃</h2>
+
+        <p>Tipo de dibujo: <span class="tipo-dibujo"></span></p>
+        <p>Tamaño: <span class="tamanio-dibujo"></span></p>
+        <p>Cantidad: <span id="cantidad-dibujo"></span></p>
+
+        <p>Dibujo pedido: $ <span id="valorDibujo"></span></p>
+
+        <button type="submit" id="botonQuiero">¡QUIERO MI DIBUJO!</button>
+    </div>
+</body>
+
+</html>
